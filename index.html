@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BEAF: Observing BEfore-AFter Changes to Evaluate Hallucination in Vision-language Models</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({            
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}            
+    });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h2 class="title is-2 publication-title">BEAF: Observing BEfore-AFter Changes to </p> Evaluate Hallucination in Vision-language Models</h2>
+          <div class="is-size-5 publication-authors">
+
+            <div style="color:#A40000;">
+              <b font size="4">
+              ECCV 2024
+              </b>
+            </div>
+            
+            <span class="author-block">
+              <a href="https://sites.google.com/g.postech.edu/moon-ye-bin">Moon Ye-Bin*</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://memesoo99.github.io/">Nam Hyeon-Woo*</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://github.com/heimish-kyma">Wonseok Choi</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://ami.postech.ac.kr/members/tae-hyun-oh">Tae-Hyun Oh</a><sup>1,2,3</sup>
+            </span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>1</sup>Dept. of Electrical Engineering, POSTECH,</span>
+            <span class="author-block"><sup>2</sup>Grad. School of Artificial Intelligence, POSTECH,</span>
+            <span class="author-block"><sup>2</sup>Institute for Convergence Research and Education in Advanced Technology, Yonsei University</span>
+          </div>
+
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Ye-Bin_TextManiA_Enriching_Visual_Feature_by_Text-driven_Manifold_Augmentation_ICCV_2023_paper.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2307.14611"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/pxBH9IxMXcg?si=qmbbk39GXSAAlUgz"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Poster Link. -->
+              <span class="link-block">
+                <a href="https://drive.google.com/file/d/1S3CnCbMsqPTrBcH7UNOA7VPJxJE4YwTa/view?usp=sharing"
+                   class="external-link button is-normal is-rounded is-dark">
+                   <span class="icon">
+                    <i class="fas fa-image"></i>
+                </span>
+                  <span>Poster</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/postech-ami/TextManiA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <video src="./static/figures/teaser.mov" width="1500px" autoplay loop muted playsinline></video>
+      <h2 class="subtitle has-text-centered">
+        <p>
+        The key idea of our <span class="dnerf">BEAF</span> benchmark is manipulating visual scene information and
+        </p> 
+        designing the metrics based on the model's answer changes along the scene changes.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Large vision language models (LVLMs) perceive the world through a combination of a visual encoder and large language models (LLMs). The visual encoder, pre-trained on large-scale vision-text datasets, provides zero-shot generalization to visual data, and LLMs endow the high reasoning ability to LVLMs. It leads LVLMs to achieve high performance on wide benchmarks without fine-tuning, known as zero or few-shot capability of LLMs. However, recent studies show that LVLMs are vulnerable to hallucination. This undesirable behavior degrades reliability and credibility, thereby making users unable to fully trust the output from LVLMs. 
+          </p>
+          <p>
+            To enhance trustworthiness and better tackle the hallucination of LVLMs, we curate a new evaluation dataset, called the BEfore-AFter hallucination dataset (BEAF), and introduce new metrics: True Understanding (TU), IGnorance (IG), StuBbornness (SB), and InDecision (ID). Unlike prior works that focus only on constructing questions and answers, the key idea of our benchmark is that we manipulate visual scene information by image editing models and design the metrics based on scene changes. This allows us to clearly assess whether LVLMs correctly understand a given scene by observing the ability to perceive changes. We also visualize the correctness heatmap by virtue of our two-axis view: vision and text. Upon evaluating LVLMs with our dataset, we observed that our metrics can reveal different aspects of LVLM hallucination.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop has-text-centered">
+        <h2 class="title is-3">BEAF Dataset</h2> <br>
+        <p>
+          <h4 class="title is-4">Image Samples</h4>
+      </p>
+    <div class="columns is-centered has-text-centered">
+      <!-- Visual Effects. -->     
+
+        <div class="content">
+            <img src="./static/figures/ori_mani_samples.png"
+            class="interpolation-image"
+            alt="Interpolation end reference image."
+            width="800">
+            <br>Samples of the original and manipulated images in the BEAF dataset. The first column contains original images, <br>and the rest of the columns contain manipulated images. The removed object is noted below each image.
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <div class="column">
+        <p>
+            <h4 class="title is-4">Data Statistics</h4>
+        </p>
+        <ul style="list-style-type:disc">
+          <div class="content">
+            <img src="./static/figures/data_statistics.png"
+            class="interpolation-image"
+            alt="Interpolation end reference image."
+            width="900">
+            <br>Our BEAF dataset contains 26K image-question pairs, consisting of the original and manipulated ones. On average, an original image is asso- ciated with 3.45 manipulated images and 11.72 questions.
+            The total number of removed objects is the same as the number of manipulated images, and one object in question is the same as the number of image-question pairs.
+
+        </div>
+        </ul>
+        <br>
+        <p>
+            <h4 class="title is-4">Evaluation Metrics</h4>
+        </p>
+        <ul style="list-style-type:disc">
+          <div class="content">
+            <img src="./static/figures/metric.png"
+            class="interpolation-image"
+            alt="Interpolation end reference image."
+            width="600">
+            <br> We propose four new metrics: True Understanding (TU), IGnorance (IG), StuBbornness (SB), and InDecision (ID), for more detailed evaluation by
+            exploiting the distinctive configuration of before-/after-changes in our dataset.
+            TU measures whether the models truly understand the scene.
+            IG measures the extent to which models lack knowledge about specific scene information.
+            SB measures the extent to which models adhere to their initial answers, and the subscripts of p and n correspond to the consistent positive (“Yes”) and negative (“No”) answers, respectively.
+            ID focuses on the answers to the questions that are not relevant to the removed objects. These answers should not be changed even after the manipulation.
+        </div>
+        </ul>
+      </div>
+    </div>
+    <!--/ Matting. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop has-text-centered">
+        <h2 class="title is-3">Evaluation Results</h2> <br>
+    
+      <!-- Visual Effects. -->
+      <div class="content">
+          <h4 class="title is-4">Evaluation on BEAF dataset with proposed and traditional metrics</h4>
+          <img src="./static/figures/quan1.png"
+          class="interpolation-image"
+          alt="Interpolation end reference image."
+          width="800">
+          <img src="./static/figures/quan2.png"
+          class="interpolation-image"
+          alt="Interpolation end reference image."
+          width="800">
+      </div>
+      <br>
+      <div class="content">
+        <h4 class="title is-4">Visualization of correctness heatmap</h4>
+        <img src="./static/figures/qual1.png"
+        class="interpolation-image"
+        alt="Interpolation end reference image."
+        width="800">
+    </div>
+    <br>
+    <div class="content">
+      <h4 class="title is-4">Changes in answers for the open-ended generation task</h4>
+      <img src="./static/figures/qual2.png"
+      class="interpolation-image"
+      alt="Interpolation end reference image."
+      width="800">
+    </div>
+      <!--/ Visual Effects. -->
+
+    <br><br>
+    <!-- Acknowledgement. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Acknowledgement</h2> <br>
+          <p>
+            This work was partly supported by Institute of Information & communications Technology Planning & Evaluation (IITP) grant funded by the Korea government(MSIT) (No.2021-0-02068, Artificial Intelligence Innovation Hub; No.2022-0-00124, Development of Artificial Intelligence Technology for Self-Improving Competency-Aware Learning Capabilities)
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Acknowledgement. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{yebin2023beaf,
+  title     = {BEAF: Observing BEfore-AFter Changes to Evaluate Hallucination in Vision-language Models},
+  author    = {Ye-Bin, Moon and Hyeon-Woo, Nam and Choi, Wonseok and Oh, Tae-Hyun},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p> 
+          Source code mainly borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
